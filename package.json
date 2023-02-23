@@ -9,7 +9,7 @@
 
   },
   "scripts": {
-    "start": "node app.js -q"
+    "start": "node app.js "
   },
   "keywords": [],
   "author": "",
