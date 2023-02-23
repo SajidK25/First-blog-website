@@ -2,9 +2,9 @@
   "name": "blog-website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon app.js -q"
+    "start": "node app.js -q"
   },
   "keywords": [],
   "author": "",
