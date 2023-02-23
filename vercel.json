@@ -3,10 +3,10 @@
     "name": "music-album",
     "builds": [
        { "src": "app.js",
-        "use": "@vercel/node" }
+        "use": "@now/node" }
     ],
     "routes": [
        { "src": "/(.*)",
-       "dest": "/app.js" }
+       "dest": "app.js" }
     ]
  }
