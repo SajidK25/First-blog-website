@@ -29,6 +29,11 @@ const postmodelschema=new postschema({
 
         type:String,
         required:true
+    },views:{
+
+type:Number,
+
+
     }
     
     

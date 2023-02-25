@@ -773,7 +773,12 @@ alert("not sent");
                 <div class="content" style="padding: 15px; width: 400px;">
                     <h6><b><%= postdata.title.slice(0,30) %>... </b> </h6>
                      <p style="font-weight: 100;"> <%= postdata.post.slice(0,100)%>  </p><a style="text-decoration: none; color: #04AA6D; font-weight: 500;" href="/postdetail/<%= postdata._id %> ">Readmore</a>
-            
+                     <% if(typeof postdata.views=="undefined") {%>
+                      <p style="font-size: 15px; color: red; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">views : No views yet</p>
+                     
+                      <% }else{ %>
+                     <p style="font-size: 15px; color: red; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">views <%= postdata.views %></p>
+                     <% } %>
    
                      
      

@@ -31,6 +31,7 @@ const { dirname } = require("path");
 
 const {login,register,postregistration,postloginform,registervalidation,loginvalidations}=require("../controllers/login")
 const {userprofile}=require("../controllers/profilecontrollers");
+const { findByIdAndUpdate } = require("../models/post");
 
 
 //router is builten middleware in express js 
@@ -350,7 +351,7 @@ const postdata=await posts.findOne({_id:postid})
 console.log(postdata);
 
 
-res.render('assests/postdetail',{postdata:postdata,loggeduser,login:true})
+res.render('assests/postdetail',{postdata:postdata,loggeduser,postid,login:true})
 
 
 
@@ -1254,7 +1255,33 @@ res.send(relatedpost)
    
 
 
+router.post("/viewscounter",async(req,res)=>{
 
+const data =req.body.term
+console.log(data);
+
+const postdata=await posts.findById(data);
+console.log(postdata)
+ 
+const a=postdata.views;
+console.log(a)
+ if(typeof a!=="undefined"){
+const calculateviews=a+1;
+
+const updateview=await posts.findByIdAndUpdate(data,{views:calculateviews})
+
+ }
+ else{
+
+const view=1;
+const updateview=await posts.findByIdAndUpdate(data,{views:view})
+
+ }
+
+
+
+
+})
 
 router.use((req,res,next)=>{
 

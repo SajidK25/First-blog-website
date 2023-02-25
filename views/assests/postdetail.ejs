@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   
 </head>
 
 
@@ -142,6 +144,7 @@ text-align: center;
 </style>
 
 <body>
+
     
     <div> <%- include('components/navigation.ejs') %> </div>
 <!--header image -->
@@ -159,8 +162,7 @@ text-align: center;
 
             
 <!--btns update and delete-->
-
-
+ 
 <% if(loggeduser==postdata.userID){ %> 
     
 
@@ -265,6 +267,50 @@ text-align: center;
 
 
 
+    <script>
+
+        setTimeout(function() {
+         
+
+            let x='<%= postid%>'
+    
+           //here is code of ajax req to the server will will update view of post in database 
+            
+         
+
+
+
+
+
+
+           $.ajax({
+    type: 'POST',
+    url: '/viewscounter',
+    data: { term: x },
+    success: function(data) {
+        
+    },
+    error: function(err) {
+        
+        alert("not sent");
+        
+    }
+});
+
+
+
+
+
+
+
+}, 0);
+        
+        
+        
+        
+        
+            </script>
+        
 
 
 
