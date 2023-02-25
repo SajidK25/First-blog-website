@@ -13,7 +13,7 @@
      },
      {
        "src": "/(.*)",
-       "dest": "assests/$1"
+       "dest": "assests/login"
      }
    ],
    "env": {
