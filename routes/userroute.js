@@ -56,6 +56,8 @@ router.post("/postlogin",loginvalidations,postloginform);
 
 router.get("/profile/:page",auth,async(req,res)=>{
 
+   console.log("token "+req.session.user);
+
 
    
 
