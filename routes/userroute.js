@@ -691,7 +691,7 @@ console.log("req came")
             let transporter = nodemailer.createTransport({
                service:'gmail',
                auth: {
-                 user:'latestgaadgets@gmail.com', // generated ethereal user
+                 user:'', // generated ethereal user
                  pass: 'gyegiwtbyxsuwqai' // generated ethereal password
                },
              });
@@ -702,7 +702,7 @@ console.log("req came")
         let mailoptions={
 
 
-         from: 'latestgaadgets@gmail.com', // sender address
+         from: '', // sender address
          to: email, // list of receivers
          subject:"hey!"+name +"✔ we are working on your request", // Subject line
          //text: "thanks for contacting bloging.pk ", // plain text body
@@ -851,7 +851,7 @@ const userdata=await users.findOne({_id:id})
             let transporter = nodemailer.createTransport({
                service:'gmail',
                auth: {
-                 user:'latestgaadgets@gmail.com', // generated ethereal user
+                 user:'', // generated ethereal user
                  pass: 'gyegiwtbyxsuwqai' // generated ethereal password
                },
              });
@@ -862,7 +862,7 @@ const userdata=await users.findOne({_id:id})
         let mailoptions={
 
 
-         from: 'latestgaadgets@gmail.com', // sender address
+         from: '', // sender address
          to:userdata.email, // list of receivers
          subject:"hey!"+userdata.name+"verify your account ✔ ", // Subject line
          //text: "thanks for contacting bloging.pk ", // plain text body
