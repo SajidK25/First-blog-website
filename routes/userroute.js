@@ -39,8 +39,8 @@ const router=express.Router();
 
 
 router.get("/",stoplogin,(req,res)=>{
-   res.send("server is working fine now")
-//res.render("assests/login",{title:"login",login:"false"})
+  // res.send("server is working fine now")
+res.render("assests/login",{title:"login",login:"false"})
 
 })
 router.get("/login",stoplogin,login)
